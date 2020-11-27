@@ -1,0 +1,65 @@
+{{>header}}
+<div class="modal-dialog">
+    <div class="modal-content animate">
+    {{#if hasErrors}}
+        <div class="alert alert-danger">
+            {{# each messages }}
+                <p>{{this}}</p>
+            {{/each}}
+        </div>
+    {{/if}}
+        <form action="/user/signin" method="POST">
+            <div class="modal-header">
+                <!--        <span class="close" data-dismiss="modal"><i class="fas fa-times-circle"></i></span>-->
+                <br><h4 class="modal-title">ĐĂNG NHẬP</h4>
+            </div>
+            <div class="manner-login">
+                <div class="item phone">
+                    <span class="fas fa-mobile-alt"></span>SỐ ĐIỆN THOẠI
+                </div>
+                <div class="item fb">
+                    <span class="fab fa-facebook-f" ></span> FACEBOOK
+                </div>
+                <div class="item google">
+                    <span class="fab fa-google-plus-g"></span>GOOGLE
+                </div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">Đăng nhập với tài khoản khác</span>
+                </div>
+            </div>
+            <!--            <div class="paragraph">-->
+            <!--                <p></p>-->
+            <!--            </div>-->
+            <div class="acc">
+                <div class="input">
+                    <i class="far fa-envelope"></i>
+                    <input type="text" id="email" name="email" placeholder="Số điện thoại hoặc e-mail">
+                </div>
+                <div class="input">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu">
+                </div>
+            </div>
+            <div class="group container-fluid">
+                <div class="float-left">
+                    <input checked type="checkbox" id="remember">
+                    <label for="remember">Nhớ mật khẩu</label>
+                </div>
+                <div class="float-right">
+                    <a href="#">Quên mật khẩu</a>
+                </div>
+            </div>
+            <div class="btn-signin">
+                <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                <button class="btn btn-primary" type="submit">ĐĂNG NHẬP</button>
+            </div>
+            <div class="signup modal-footer">
+                <p class="text-center">Chưa có tài khoản ?<a href="/user/signup"><span class="dk">ĐĂNG KÍ</span></a></p>
+            </div>
+        </form>
+    </div>
+</div>
+{{>footer}}

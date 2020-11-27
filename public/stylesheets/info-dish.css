@@ -1,0 +1,106 @@
+/* Breadcrumb */
+#breadcrumb .breadcrumb {
+    background: transparent;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-family: 'Google Sans','Noto Sans Myanmar UI','arial',sans-serif;
+    margin-bottom: 20px;
+    font-weight: 700; }
+/* End Breadcrumb */
+.display_flex {
+    display: flex;
+}
+.flex_wrap{
+    flex-wrap: wrap;
+}
+.align-items-center {
+    align-items: center;
+}
+/* Product Detail */
+#product .product-info{ padding-bottom: 80px; }
+.product_info_wrap #img_product img{ width: 100%; }
+.product_info_wrap #img_product,.product_info_wrap .info_product{ width: 50%; }
+
+.info_product_wrap{max-width: 66.66667%;margin: 0 auto; }
+
+.info_product_wrap .info_product_title {
+    font-family: 'Google Sans','Noto Sans Myanmar UI','arial',sans-serif;
+    margin-top: 0; display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.info_product_wrap .info_product_title:after { background-color: #EA8025; }
+
+.info_product_wrap .info_product_short_des{ font-size: 16px; }
+
+#add_item_form .selector-wrapper{ display: none; }
+
+#add_item_form .product_price{
+    display: inline-block; color: #EA8025; font-weight: 700;
+    font-size: 24px; font-family: 'Bebas Neue','Lato', sans-serif; }
+
+.info_product_wrap .btn_action{ margin-top: 15px; margin-bottom: 15px; }
+
+.info_product_wrap .btn_action a{
+    display: inline-block; background: #EA8025; color: #fff; padding: 15px 30px; font-weight: 700;
+    font-size: 18px; font-family: 'Bebas Neue','Lato', sans-serif; width: 60%; text-align: center; }
+
+.info_product_wrap .delivery_hotline{ font-size: 16px; }
+
+.info_product_wrap .delivery_hotline a { color: #EA8025; }
+
+#product .product_description .block_des { padding: 100px 0; }
+
+#product .product_description .block_container{ max-width: 50%; margin: 0 auto; }
+
+#product .product_description .block_des.block_des_1{ background: #fff; }
+
+#product .product_description .block_des h3{
+    font-size: 42px; font-weight: 700; color: #000; margin-top: 0; margin-bottom: 30px;
+    font-family: 'Bebas Neue','Lato', sans-serif; position: relative; }
+
+#product .product_description .block_des h3:after{
+    content: ''; width: 10%; height: 4px;
+    background: #EA8025; display: block; margin: 0 auto; }
+
+#product .product_description .block_des p{
+    margin-top: 30px; font-weight: 300; margin-bottom: 0;
+    font-size: 21px; line-height: 30px; }
+
+#product .product_description .block_des.block_des_3{ padding: 0; }
+#product-related{ padding: 100px 0 50px; }
+
+#product-related .related_product_title{
+    font-size: 42px; font-weight: 700; color: #000; margin-top: 0; margin-bottom: 30px; text-align: center;
+    font-family: 'Bebas Neue','Lato', sans-serif; position: relative; padding-left: 15px; padding-right: 15px; }
+
+#product-related .related_product_title:after{
+    content: ''; width: 10%; height: 4px;
+    background: #EA8025; display: block; margin: 0 auto;}
+/* End Product Detail */
+/* Collection */
+.collection_menu_wrap{ padding: 100px 0 50px;}
+
+.stikySidebar{
+    top: 70px; position: -webkit-sticky;
+    position: sticky; left: 0;}
+
+.sidebar_menu{ background: #fff; }
+
+.sidebar_menu ul{ padding: 0; margin: 0; }
+
+.sidebar_menu ul li{ padding: 12px 30px; }
+
+.sidebar_menu ul li a{
+    font-size: 16px; font-weight: 700; color: #000;
+    font-family: 'Bebas Neue','Lato', sans-serif; }
+
+.sidebar_menu ul li a.active{ color: #EA8025; }
+.block_menu_item .block_menu_item_title { color: #000; margin: 0; }
+.block_menu_item .block_menu_item_title span{ float: none; display: inline-block;}
+.block_menu_item .block_menu_item_title span:after{ background: #EA8025; }
+/* End Collection */

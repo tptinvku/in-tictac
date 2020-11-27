@@ -1,0 +1,37 @@
+<!-- Container (Contact Section) -->
+<div  id="contact" class="container-fluid"style="padding: 100px 10px 50px ; background-color: white">
+    <div class="center-block" style="width:200px;">
+        <h3 class="text-center line_after_heading_contact section_heading_contact">LIÊN HỆ</h3>
+    </div>
+    <p class="text-center"><em>Chúng tôi yêu các bạn!</em></p>
+    <div class="container" style="width: 500px;">
+        <div class="row">
+        <div class="col-sm-5 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Họ và tên" type="text" required>
+        </div>
+        <div class="col-sm-7 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+    </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Nội dung" rows="5"></textarea>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-md-12 form-group">
+                <button id="btnsend" class="btn pull-right" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script type="text/javascript">-->
+<!--    document.getElementById("btn-send").addEventListener("click",check)-->
+<!--    function check()-->
+<!--    {-->
+<!--        alert("Vui lòng điền đầy đủ thông tin");-->
+<!--    }-->
+<!--</script>-->
+<script>
+    $(document).ready(function () {
+        $("#btnsend").click(function () {
+            alert("aaaaa");
+        });
+    })
+</script>

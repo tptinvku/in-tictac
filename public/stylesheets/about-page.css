@@ -1,0 +1,43 @@
+
+.container1 {
+    background-color: #F2F2F2;
+}
+
+.sidebar-title {
+    position: relative;
+    margin-bottom: 30px;
+}
+.sidebar-title h2 {
+    color: #121212;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 12px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sidebar-title h2:before {
+    content: '';
+    position: absolute;
+    left: 38%;
+    bottom: 0px;
+    width: 300px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sidebar-title h2:after {
+    content: '';
+    position: absolute;
+    left: 43%;
+    bottom: 0px;
+    width: 150px;
+    border-bottom: 3px solid #f7dc46;
+}
+
+h2,h5{
+    font-family: 'Google Sans', 'Noto Sans Myanmar UI', 'arial', sans-serif;
+}
+ul #about{
+    display: none;
+}

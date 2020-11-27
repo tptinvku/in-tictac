@@ -1,0 +1,65 @@
+<div class="container-fluid"style="position: sticky;">
+  <div class="container"><h2 style="font-family: 'Google Sans', 'Noto Sans Myanmar UI', 'arial', sans-serif;">Giỏ hàng</h2></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8">
+              {{#if products}}
+                  {{#each products}}
+                  <div class="panel">
+                      <div class="row">
+                              <div class="col-sm-2">
+                                  <p class="image">
+                                      <img class="img-thumbnail img-responsive" src="{{this.item.imgpath}}"style="height: 100px;width: 100px">
+                                  </p>
+                              </div>
+                              <div class="col-sm-10" style="margin-top: 10px;">
+                                  <div class="row">
+                                      <div class="col-sm-6">
+                                          <strong>{{ this.item.title }}</strong>
+                                          <span class="badge">{{ this.qty }}</span>
+                                          <span class="label label-success pull-right" style="font-size: 12px;">{{this.price}}-VNĐ</span>
+                                          <div class="btn-group pull-right">
+                                              <a href="/home/sub-from-cart/{{this.item._id}}" type="button" class="btn btn-default"><strong>-</strong></a>
+                                              <a href="/home/add-to-cart/{{this.item._id}}" type="button" class="btn btn-default"><strong>+</strong></a>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-4">
+                                          <div class="btn-group pull-right">
+                                              <button type="button" class="btn btn-default">Xóa</button>
+                                              <button type="button" class="btn btn-default">Mua sau</button>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                              </div>
+
+                      </div>
+                  </div>
+                  {{/each}}
+              {{/if}}
+          </div>
+          <div class="col-md-4">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                      <strong><h3>Thanh Toán</h3></strong>
+                  </div>
+                  <div class="panel-body"style="padding: 10px 15px ">
+                      <span>Tạm tính : </span>
+                      <strong class="temporary-price pull-right"><h5>{{ totalPrice }} -VNĐ</h5></strong>
+                  </div>
+                  <div class="panel-footer" >
+                      <span>Thành tiền :<strong class="pull-right"><h4>{{ totalPrice }}-VNĐ</h4></strong></span>
+                  </div>
+              </div>
+              <a type="button" href="/home/checkout" class="btn btn-success" style="width: 100%; height: 40px;margin-bottom: 30px;">Tiến hành đặt hàng</a>
+              <div class="voucher panel panel-default">
+                  <div class="panel-heading"><h4>Mã giảm giá/Quà tặng</h4></div>
+                  <div class="input-group" style="padding: 20px 10px ;">
+                      <input type="text" class="form-control" placeholder="Nhập ở đây" aria-describedby="basic-addon2">
+                      <span class="input-group-addon btn-warning" id="basic-addon2" type="submit" style="cursor: pointer;">Đồng ý</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

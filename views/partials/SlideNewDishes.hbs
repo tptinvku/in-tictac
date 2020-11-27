@@ -1,0 +1,69 @@
+<div class="container-fluid col-md-7" style="padding: 0 10px;">
+    <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            {{#slides}}
+                {{# each this}}
+                    <div class="item"> <--!active-->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-3"><img src="http://placehold.it/350x250" class="img-responsive"></div>
+                                <div class="col-md-9">
+                                    <h2>{{this.title}}</h2>
+                                    <p>{{this.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/slides}}
+            </div>
+            <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+        <div class="controls">
+            <ul class="nav">
+                {{slides}}
+                    {{#this}}
+                        <li data-target="#custom_carousel" data-slide-to="0" class="active">
+                        <a href="#">
+                            <img style="width: 50px;height: 50px;" src="{{this.imgpath}}">
+                            <small>{{this.title}}</small>
+                        </a>
+                        </li>
+                        <li data-target="#custom_carousel" data-slide-to="1">
+                            <a href="#">
+                                <img style="width: 50px;height: 50px;" src="{{this.imgpath}}">
+                                <small>{{this.title}}</small>
+                            </a>
+                        </li>
+                        <li data-target="#custom_carousel" data-slide-to="2">
+                            <a href="#">
+                                <img style="width: 50px;height: 50px;" src="{{this.imgpath}}">
+                                <small>{{this.title}}</small>
+                            </a>
+                        </li>
+                        <li data-target="#custom_carousel" data-slide-to="3">
+                            <a href="#">
+                                <img style="width: 50px;height: 50px;" src="{{this.imgpath}}">
+                                <small>{{this.title}}</small>
+                            </a>
+                        </li>
+                    {{/this}}
+            </ul>
+        </div>
+    </div>
+    <!-- End Carousel -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+                for (var i = 0 ; i<4 ;i++){
+                   $('#custom_carousel .item').addClass('active');
+                   $('#custom_carousel .controls li').addClass('active');
+                }
+                $('#custom_carousel .controls li.active').removeClass('active');
+                $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+            })
+        });
+    </script>
+</div>

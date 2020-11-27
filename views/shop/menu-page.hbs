@@ -1,0 +1,70 @@
+
+{{>header}}
+<div style="position: relative ; top: 0;">
+    <img class="img-responsive" src="https://www.jamieoliver.com/drinks-tube/wp-content/uploads/2014/05/Drinks-Banner.jpg" alt="">
+</div>
+<div class="collection_menu_wrap">
+    <div class="container">
+        <div class="row">
+            <div class=" sticky-Sidebar">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+                    {{>filter-bar}}
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 border_right_before">
+                <div class="block_menu_item" id="mon-noi-bat">
+                    <h3 class="block_menu_item_title">
+                        <span class="line_after_heading section_heading">MÓN NỔI BẬT</span>
+                    </h3>
+                    <div class="flex_wrap display_flex menu_lists">
+                        {{#each CAPHE}}
+                            {{>menu-filter}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="block_menu_item" id="ca-phe">
+                    <h3 class="block_menu_item_title">
+                        <input type="hidden" name="type" value="CÀ PHÊ">
+                        <span class="line_after_heading section_heading">CÀ PHÊ</span>
+                    </h3>
+                    <div class="flex_wrap display_flex menu_lists">
+                        {{#each CAPHE}}
+                            {{>menu-filter}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="block_menu_item" id="tra-macchiato">
+                    <h3 class="block_menu_item_title">
+                    <input type="hidden" name="type" value="TRÀ & MACCHIATO">
+                    <span class="line_after_heading section_heading">TRÀ &amp; MACCHIATO</span></h3>
+                    <div class="flex_wrap display_flex menu_lists">
+                        {{#each TEA}}
+                            {{>menu-filter}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="block_menu_item" id="thuc-uong-da-xay">
+                    <h3 class="block_menu_item_title">
+                    <input type="hidden" name="type" value="THỨC UỐNG ĐÁ XAY">
+                    <span class="line_after_heading section_heading">THỨC UỐNG ĐÁ XAY</span></h3>
+                    <div class="flex_wrap display_flex menu_lists">
+                        {{#each DAXAY}}
+                            {{>menu-filter}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="block_menu_item" id="thuc-uong-trai-cay">
+                    <h3 class="block_menu_item_title">
+                    <input type="hidden" name="type" value="THỨC UỐNG TRÁI CÂY">
+                    <span class="line_after_heading section_heading"id="thuc-uong-trai-cay">THỨC UỐNG TRÁI CÂY</span></h3>
+                    <div class="flex_wrap display_flex menu_lists">
+                        {{#each TRAICAY}}
+                            {{>menu-filter}}
+                        {{/each}}
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+{{>footer}}

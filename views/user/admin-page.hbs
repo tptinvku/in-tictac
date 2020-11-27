@@ -1,0 +1,93 @@
+<h1>MONGODB - EXERCISE</h1>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form action="/user/admin/insert" method="post">
+        <div class="input">
+            <label for="imgpath">Image</label>
+            <input type="text" id="img" name="imgpath">
+        </div>
+        <div class="input">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="type">Type</label>
+            <input type="text" id="type" name="type">
+        </div>
+        <div class="input">
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <div class="input">
+            <label for="price">Cost</label>
+            <input type="text" id="cost" name="price">
+        </div>
+        <div class="input">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Get Data</h3>
+    <a href="/user/admin/get-data">LOAD DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>img: {{ this.imgpath }}</div>
+                <div>title: {{ this.title }}</div>
+                <div>type: {{ this.type }}</div>
+                <div>description: {{ this.description }}</div>
+                <div>price: {{ this.price }}</div>
+                <div>state: {{this.state}}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+<section class="update">
+    <h3>Update Data</h3>
+    <form action="/user/admin/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="imgpath">Image</label>
+            <input type="text" id="img" name="imgpath">
+        </div>
+        <div class="input">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="type">Type</label>
+            <input type="text" id="type" name="type">
+        </div>
+        <div class="input">
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <div class="input">
+            <label for="price">Cost</label>
+            <input type="text" id="cost" name="price">
+        </div>
+        <div class="input">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>
+</section>
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/user/admin/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>

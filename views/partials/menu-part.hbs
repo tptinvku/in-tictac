@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+
+<!--small-menu-->
+<div class="container" style="margin-top: 80px; margin-bottom: 100px ;">
+    <div class="container">
+        <h3 class="line_after_heading section_heading" style="font-size: 32px;">
+        BÁN CHẠY NHẤT
+        </h3>
+        <a href="/home/menu">
+            <h3 class="section_heading_see_more">
+            XÊM TẤT CẢ SẢN PHẨM
+            </h3>
+        </a>
+    </div>
+    <div class="col-md-12">
+        {{# each products }}
+            <div class="row">
+                <form action="/home">
+                    {{# each this}}
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="img-responsive img-rounded" src="{{this.imgpath}}" alt="{{this.title}}">
+                                <div class="caption">
+                                    <h4  class="text-center">
+                                            <a style="text-decoration: none;color: #000;" href="/home/info/{{this._id}}" id="product_name"> {{this.title}}</a>
+                                    </h4>
+                                </div>
+                                <div class="caption">
+                                    <p style="font-size: 20px ; font-weight: bold ;text-align: center ;font-family: 'Anton', sans-serif; ">
+                                        {{this.price}} - VNĐ
+                                    </p>
+                                    <p style="text-align:center; margin-bottom: 10px ;">
+                                        <a href="/home/checkout" class="btn btn-success" role="button">MUA NGAY</a>
+                                        <a href="/home/add-to-cart/{{this._id}}" class="btn btn-warning" role="button"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </form>
+        </div>
+        {{/each}}
+    </div>
+</div>

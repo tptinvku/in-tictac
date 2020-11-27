@@ -1,0 +1,62 @@
+<html>
+<body>
+<div class="modal fade" id="MyShop">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-left">Mua ngay</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="ImgMenu/TS7.jpg" alt="traden" width="100%" ma />
+                    </div>
+                    <div class="col-md-3">
+                        <span class="spanquantity-span">Trà Sửa</span>
+                    </div>
+                    <div class="quantity col-md-3">
+                        <button class="minus-btn" type="button" name="button" >
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="text" name="name" value="1">
+                        <button class="plus-btn" type="button" name="button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="spanquantity-span">10 000đ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default">
+                    <a href="Shipper.html">Thanh toán</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        $('.minus-btn').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $img = $(".quantity-price")
+            var $input = $this.closest('div').find('input');
+            var value = parseInt($input.val());
+
+            if (value > 1) {
+                value = value - 1;
+                $img =value*$img;
+            } else {
+                value = 0;
+            }
+
+            $input.val(value);
+
+        });
+    </script>
+
+</body>
+</html>

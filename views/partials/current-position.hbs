@@ -1,0 +1,27 @@
+<div onload="initialize()">
+    <div id="map"></div>
+</div>
+
+<script type="text/javascript">
+    // var map;
+    // function initMap() {
+    //     map = new google.maps.Map(document.getElementById('map'), {
+    //         center: {lat: -34.397, lng: 150.644},
+    //         zoom: 8
+    //     });
+    // }
+    function initialize(){
+        var myLating = new google.maps.Lating(-34.397, 150.644);
+        var mapOptions = {
+            center: myLating,
+            zoom: 12,
+            mypTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLating,
+            title: 'Hello tin ',
+        })
+        marker.setMap(map);
+    }
+</script>

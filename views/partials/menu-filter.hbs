@@ -1,0 +1,21 @@
+
+        {{# each this}}
+            <div id="{{this._id}}" class="menu_item">
+                <div class="thumbnail">
+                    <img class="img-responsive img-rounded " src="{{this.imgpath}}" alt="{{this.title}}">
+                    <div class="caption">
+                        <h4 class="text-center">{{this.title}}</h4>
+                    </div>
+                    <div class="caption">
+                        <p style="font-size: 20px ; font-weight: bold ;text-align: center ;font-family: 'Anton', sans-serif; ">
+                            {{this.price}} - VNĐ
+                        </p>
+                        <p style="text-align:center; margin-bottom: 10px ;">
+                            <a href="   " class="btn btn-success" role="button">MUA NGAY</a>
+                            <a href="/home/add-to-cart/{{this.item._id}}" class="btn btn-warning" role="button"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+

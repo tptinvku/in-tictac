@@ -1,0 +1,20 @@
+
+.temporary-price,.price{
+    float: right;
+}
+.price{
+    color: #e22821;
+    font-size: 22px;
+}
+.temporary-price{
+    font-size: 18px;
+}
+.voucher{
+    margin-top: 20px;
+}
+h2,h3,h4,span,strong{
+    font-family: 'Google Sans','Noto Sans Myanmar UI','arial',sans-serif;
+}
+ul #cart{
+    display: none;
+}

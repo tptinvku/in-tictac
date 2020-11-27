@@ -1,0 +1,82 @@
+
+.section_heading {
+     float: left;
+     font-weight: 700;
+     position: relative;
+     margin-bottom: 30px;
+     margin-top: 0;
+     font-size: 32px;
+     font-family: 'Google Sans','Noto Sans Myanmar UI','arial',sans-serif;
+ }
+.flex_wrap {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.display_flex{ display: -ms-flexbox; display: -webkit-flex; display: flex;}
+.line_after_heading:after{
+    content: ''; height: 4px; background: #191919;
+    width: 50%; display: block; }
+/* Collection */
+.collection_menu_wrap{ padding: 100px 0 50px;}
+
+.sticky-Sidebar{
+    top: 70px;
+    position: sticky;
+    left: 0;
+}
+.sidebar_menu{ background: white; }
+
+.sidebar_menu ul{ padding: 0; margin: 0; }
+
+.sidebar_menu ul li{ padding: 12px 30px; list-style-type: none;}
+
+.sidebar_menu ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Google Sans', 'Noto Sans Myanmar UI', 'arial', sans-serif;
+}
+.sidebar_menu ul li a:hover{text-decoration: none;color: green; border-bottom:2px solid orange ;}
+.block_menu_item .block_menu_item_title { color: green; margin: 0; }
+.block_menu_item .block_menu_item_title span{ float: none; display: inline-block;}
+.block_menu_item .block_menu_item_title span:after{ background: orange; }
+/* End Collection */
+.menu_lists { margin-left: -15px; margin-right: -15px; }
+
+.menu_item{
+    /*background: #fff;*/
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 0 15px 30px;
+    min-height: 145px;
+    overflow: hidden;
+}
+
+/* moder add*/
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 18px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+.quantity button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.minus-btn img {
+    margin-bottom: 3px;
+}
+.plus-btn img {
+    margin-top: 2px;
+}
+.spanquantity-span {
+    font-size: 18px;
+}

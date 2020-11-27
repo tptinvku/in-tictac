@@ -1,0 +1,99 @@
+{{>header}}
+{{# each products}}
+    {{#each this }}
+        <div id="product">
+            <!-- Breadcrumb -->
+            <div id="breadcrumb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 " >
+                            <ol class="breadcrumb breadcrumb-arrow" itemscope itemtype="http://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/collections/all" target="_self"><span itemprop="name">Menu</span></a><meta itemprop="position" content="1" /></li>
+                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/collections/ca-phe-coffee" target="_self" itemprop="item"><span itemprop="name">{{this.type}}</span></a><meta itemprop="position" content="2" /></li>
+                                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="active"><span itemprop="name">{{this.title}}</span><meta itemprop="position" content="2" /></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Breadcrumb -->
+            <div class="product-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="product_info_wrap flex_wrap display_flex">
+                                <div id="img_product">
+                                    <img class="product_featured_image" src="//product.hstatic.net/1000075078/product/caramel_macchiato_b6f694f469794e12b04a91845f5fce2d_master.jpg" alt="caramel macchiato"/>
+                                </div>
+                                <div class="info_product display_flex align-items-center">
+                                    <div class="info_product_wrap">
+                                        <h1 class="info_product_title line_after_heading">
+                                            CARAMEL MACCHIATO
+                                        </h1>
+                                        <div class="info_product_short_des">
+                                            <p style="text-align: justify;">
+                                                Vị thơm b&eacute;o của bọt sữa v&agrave; sữa tươi, vị đắng thanh tho&aacute;t của c&agrave; ph&ecirc; Espresso hảo hạng, v&agrave; vị ngọt đậm của sốt caramel.
+                                            </p>
+                                        </div>
+                                        <form id="add_item_form" action="/cart/add" method="post" class="variants clearfix">
+                                            <div class="select clearfix" style="display:none">
+                                                <select id="product-select" name="id" style="display:none">
+                                                    <option value="1034349265">Default Title - 55,000 đ</option>
+                                                </select>
+                                                <input type="hidden" value="" id="inventory_qty" />
+                                            </div>
+                                            <div class="product_price">
+                                                55,000 đ
+                                            </div>
+                                            <div class="btn_action">
+                                                <a href="//order.thecoffeehouse.com/order" target="_blank" title="Mua ngay">
+                                                    MUA NGAY
+                                                </a>
+                                            </div>
+                                            <p class="delivery_hotline">
+                                                Gọi giao hàng tận nơi
+                                                <a href="tel:18006936" title="Hotline: 1800 6936">
+                                                    1800 6936
+                                                </a>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--    product description-->
+            <div class="product_description"><div class="block_des block_des_1" style="text-align: center;" data-mce-style="text-align: center;"><div class="block_container"><h3>Cái nhấp môi ngọt ngào</h3><p><br>Mỗi cái nhấp môi vào li Caramel Macchiato sẽ đem đến một sự ngạc nhiên thú vị, vì nhiều hương vị được gói gọn trong một li Caramel Macchiato: <span style="color: rgb(234, 128, 37);" data-mce-style="color: #ea8025;"><em><strong>vị thơm béo của bọt sữa và sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng, và vị ngọt đậm của sốt caramel</strong></em></span>.</p></div></div></div>
+            <div id="product-related">
+                <div class="container_flex">
+                    <div class="row_flex">
+                        <h3 class="related_product_title">Có thể bạn thích</h3>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <img class="img-responsive img-rounded" src="{{this.imgpath}}" alt="{{this.title}}">
+                                    <div class="caption">
+                                        <h4 class="text-center">{{this.title}}</h4>
+                                    </div>
+                                    <div class="caption">
+                                        <p style="font-size: 20px ; font-weight: bold ;text-align: center ;font-family: 'Anton', sans-serif; ">
+                                            {{this.price}} - VNĐ
+                                        </p>
+                                        <p style="text-align:center; margin-bottom: 10px ;">
+                                            <a href="#" class="btn btn-success" role="button">MUA NGAY</a>
+                                            <a href="#" class="btn btn-warning" role="button"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    {{/each}}
+{{/each}}
+{{>footer}}
